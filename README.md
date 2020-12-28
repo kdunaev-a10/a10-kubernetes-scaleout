@@ -8,4 +8,4 @@ Currently the envinroment is running using NFS share mount point where python sc
 3. create a sidecar container using centos-health-1.yml manifest. it is monitoring the runtime infomration, created each ACOS container and is able to detect if a ACOS container has been created  or deleted. The scripts are running from the NFS share mount point
 4. create Statefull set for A!0 CGN containers using cthunder_statefull_scale.yml manifest. Each A10 container will place and update a runtime file on the NFS mount point, which is read by sidecar container
 
-eachtime a command "kubectl scale" is executed creating or deleting A10 container in that Statefull set, the sidecar will update the configuration on all running and active A10 container accordingly to keep CGN Scaleout  configuration consistent and updated.
+eachtime a command "kubectl scale" is executed for creating or deleting A10 container in that Statefull set, the sidecar will update the configuration of all running and active A10 containers accordingly and keep the CGN Scaleout configuration consistent and updated.
